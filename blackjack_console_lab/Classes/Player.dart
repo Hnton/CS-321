@@ -37,6 +37,26 @@ class Player {
     this.numCards++;
   }
 
+  bool isBlackJack(List<Card> h) {
+    Card c = new Card(1, 1);
+    Card c1 = new Card(1, 2);
+    Card c2 = new Card(1, 3);
+    Card c3 = new Card(1, 4);
+
+    if (h.elementAt(0).toString() == c.toString() ||
+        h.elementAt(0).toString() == c1.toString() ||
+        h.elementAt(0).toString() == c2.toString() ||
+        h.elementAt(0).toString() == c3.toString() ||
+        h.elementAt(1).toString() == c.toString() ||
+        h.elementAt(1).toString() == c1.toString() ||
+        h.elementAt(1).toString() == c2.toString() ||
+        h.elementAt(1).toString() == c3.toString()) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   void clearHand() {
     hand.clear();
     numCards = 0;
@@ -54,7 +74,7 @@ class Player {
     return total;
   }
 
-  void getHand(bool c) {
+  List<Card> getHand(bool c) {
     print(this.name + "s Hand");
     for (int i = 0; i < numCards; i++) {
       if (i == 0 && !c) {
@@ -63,5 +83,13 @@ class Player {
         print(hand.elementAt(i).toString());
       }
     }
+    return hand;
+  }
+
+  List<Card> getCards() {
+    for (int i = 0; i < numCards; i++) {
+      hand.elementAt(i).toString();
+    }
+    return hand;
   }
 }

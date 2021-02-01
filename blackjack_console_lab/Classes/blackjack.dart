@@ -44,7 +44,8 @@ void main() {
       bool blackJack = false;
       // Player
       do {
-        if ((player.handSum() + 10) == 21 && blackJackCount == 0) {
+        if (player.isBlackJack(player.getCards()) == true &&
+            player.handSum() == 11) {
           blackJack = true;
           print("*****$name has a BLACKJACK!*****");
         }

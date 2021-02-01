@@ -17,6 +17,10 @@ class Deck {
     }
   }
 
+  int deckSize() {
+    return deck.length;
+  }
+
   void showDeck() {
     for (int i = 1; i < deck.length; i++) {
       print(deck.elementAt(i));
@@ -27,13 +31,13 @@ class Deck {
     deck.shuffle();
   }
 
-  Card drawCard() {
-    int count = 0;
-    return deck.removeAt(0);
-  }
-
   int cardsLeft() {
     return deck.length;
+  }
+
+  Card getCardAt(int i) {
+    Card card = deck.elementAt(i);
+    return card;
   }
 
   Card addCard() {
