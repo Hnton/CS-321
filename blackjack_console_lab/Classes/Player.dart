@@ -42,6 +42,10 @@ class Player {
     numCards = 0;
   }
 
+  int count() {
+    return numCards;
+  }
+
   int handSum() {
     int total = 0;
     for (Card countSum in hand) {

@@ -42,13 +42,3 @@ class Deck {
     return topCard;
   }
 }
-
-void main() {
-  Deck deck = new Deck();
-  deck.shuffle();
-  print("Card drawn");
-  print(deck.drawCard());
-  print(deck.drawCard());
-  print(deck.drawCard());
-  print(deck.cardsLeft());
-}
