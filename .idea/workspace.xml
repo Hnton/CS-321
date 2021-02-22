@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2034f33d-a222-43e7-a67a-31e1d1f7c55f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/material-components-flutter-codelabs-101-starter/mdc_100_series/ios/Flutter/flutter_export_environment.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/material-components-flutter-codelabs-101-starter/mdc_100_series/lib/Category_menu_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/material-components-flutter-codelabs-101-starter/mdc_100_series/lib/backdrop.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/material-components-flutter-codelabs-101-starter/mdc_100_series/lib/colors.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/material-components-flutter-codelabs-101-starter/mdc_100_series/pubspec.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1oqC4shx21qfLV4jykayFhVJVCR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2034f33d-a222-43e7-a67a-31e1d1f7c55f" name="Default Changelist" comment="" />
+      <created>1614004545453</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614004545453</updated>
+    </task>
+    <servers />
+  </component>
+</project>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/blackjack_console_lab/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/blackjack_console_lab/build" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_app_test/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_app_test/build" />
+      <excludeFolder url="file://$MODULE_DIR$/forms_lab/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/forms_lab/build" />
+      <excludeFolder url="file://$MODULE_DIR$/i_am_smart/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/i_am_smart/build" />
+      <excludeFolder url="file://$MODULE_DIR$/lab_layout/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/lab_layout/build" />
+      <excludeFolder url="file://$MODULE_DIR$/layout_lab_2/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/layout_lab_2/build" />
+      <excludeFolder url="file://$MODULE_DIR$/material-components-flutter-codelabs-101-starter/mdc_100_series/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/material-components-flutter-codelabs-101-starter/mdc_100_series/build" />
+      <excludeFolder url="file://$MODULE_DIR$/weather_app/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/weather_app/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
