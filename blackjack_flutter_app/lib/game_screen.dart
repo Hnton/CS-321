@@ -12,27 +12,7 @@ class GameScreen extends StatefulWidget {
   _GameScreenState createState() => _GameScreenState();
 }
 
-class _GameScreenState extends State<GameScreen>
-    with SingleTickerProviderStateMixin {
-  AnimationController _animationController;
-  Animation<double> _animation;
-  AnimationStatus _animationStatus = AnimationStatus.dismissed;
-
-  @override
-  void initState() {
-    super.initState();
-    _animationController =
-        AnimationController(duration: Duration(milliseconds: 200), vsync: this);
-
-    _animation = Tween(begin: 0.0, end: 1.0).animate(_animationController)
-      ..addListener(() {
-        setState(() {});
-      })
-      ..addStatusListener((status) {
-        _animationStatus = status;
-      });
-  }
-
+class _GameScreenState extends State<GameScreen> {
   var amount = 0;
 
   @override
@@ -89,37 +69,16 @@ class _GameScreenState extends State<GameScreen>
                     number: '10',
                     suit: club(),
                   ),
-                  getFlippingCard("10", club(), Colors.black),
+                  CardFront(
+                    color: Colors.black,
+                    number: '10',
+                    suit: club(),
+                  ),
                 ],
               ),
             ],
           ),
         ),
-      ),
-    );
-  }
-
-  Widget getFlippingCard(var number, var suit, var color) {
-    return Transform(
-      alignment: FractionalOffset.center,
-      transform: Matrix4.identity()
-        ..setEntry(3, 2, 0.002)
-        ..rotateY(pi * _animation.value),
-      child: GestureDetector(
-        onTap: () {
-          if (_animationStatus == AnimationStatus.dismissed) {
-            _animationController.forward();
-          } else {
-            _animationController.reverse();
-          }
-        },
-        child: _animation.value >= 0.5
-            ? CardBack()
-            : CardFront(
-                color: color,
-                number: number,
-                suit: suit,
-              ),
       ),
     );
   }

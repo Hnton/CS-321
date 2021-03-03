@@ -1,4 +1,4 @@
-import 'package:blackjack_flutter_app/start_screen.dart';
+import 'package:blackjack_flutter_app/game_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: StartScreen(),
+      home: GameScreen(),
     );
   }
 }
