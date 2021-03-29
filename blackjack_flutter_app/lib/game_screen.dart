@@ -6,11 +6,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class GameScreen extends StatefulWidget {
-  @override
-  _GameScreenState createState() => _GameScreenState();
-}
-
 class CardData extends ChangeNotifier {
   CardDeck deck;
   List<PokerCard> playerHand = [];
@@ -25,6 +20,8 @@ class CardData extends ChangeNotifier {
   int playerWin = 0;
   int dealerWin = 0;
   int tie = 0;
+  int anotherGame = 0;
+  bool gameStart = false;
 
   CardData(this.context) {
     deck = CardDeck();
@@ -161,9 +158,11 @@ class CardData extends ChangeNotifier {
   }
 
   void newGame() {
+    anotherGame++;
     playerHand.clear();
     dealerHand.clear();
     deal();
+    gameStart = false;
     log("NEW GAME");
     notifyListeners();
   }
@@ -183,6 +182,9 @@ class CardData extends ChangeNotifier {
     }
 
     play();
+
+    gameStart = true;
+
     notifyListeners();
   }
 
@@ -192,15 +194,32 @@ class CardData extends ChangeNotifier {
   }
 
   int getPurse() {
-    if (purse < 0) {
+    if (purse == 0) {
       purse = 1000;
     }
     return purse - bet;
   }
 
   int incrementBet() {
-    return bet += 10;
+    if (bet > purse - 10) {
+      return purse;
+    } else {
+      return bet += 10;
+    }
   }
+
+  int decrementBet() {
+    if (bet <= 11) {
+      return 10;
+    } else {
+      return bet -= 10;
+    }
+  }
+}
+
+class GameScreen extends StatefulWidget {
+  @override
+  _GameScreenState createState() => _GameScreenState();
 }
 
 class _GameScreenState extends State<GameScreen> {
@@ -210,12 +229,16 @@ class _GameScreenState extends State<GameScreen> {
     return GestureDetector(
       onTap: () {
         setState(() {
-          _cardData.playerAddCard();
+          if (_cardData.gameStart == true) {
+            _cardData.playerAddCard();
+          }
         });
       },
       onPanEnd: (details) {
         setState(() {
-          _cardData.stay();
+          if (_cardData.gameStart == true) {
+            _cardData.stay();
+          }
         });
       },
       child: Center(
@@ -268,7 +291,14 @@ class _GameScreenState extends State<GameScreen> {
                   GestureDetector(
                     onTap: () {
                       setState(() {
-                        _cardData.incrementBet();
+                        if (_cardData.gameStart == false) {
+                          _cardData.incrementBet();
+                        }
+                      });
+                    },
+                    onPanEnd: (details) {
+                      setState(() {
+                        _cardData.decrementBet();
                       });
                     },
                     child: Padding(

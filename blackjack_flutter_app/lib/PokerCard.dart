@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'Suit.dart';
 
+// ignore: must_be_immutable
 class PokerCard extends StatelessWidget {
   final Suit suit;
   final int value;
@@ -20,7 +21,6 @@ class PokerCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String _path;
-    String _cardString;
 
     void _setPath() {
       if (hidden == true) {
@@ -50,35 +50,8 @@ class PokerCard extends StatelessWidget {
       }
     }
 
-    void _setCardString() {
-      if (hidden == true) {
-        _cardString = 'hidden';
-      } else {
-        if (value >= 10 || value == 1) {
-          if (value == 10) {
-            _cardString = '10';
-          }
-          if (value == 11) {
-            _cardString = 'Jack';
-          }
-          if (value == 12) {
-            _cardString = 'Queen';
-          }
-          if (value == 13) {
-            _cardString = 'King';
-          }
-          if (value == 1) {
-            _cardString = 'Ace';
-          }
-        } else {
-          _cardString = value.toString();
-        }
-        _cardString += ' of ' + suitToString(suit);
-      }
-    }
-
     _setPath();
-    _setCardString();
+
     return ClipRRect(
         borderRadius: BorderRadius.circular(5),
         child: Container(
