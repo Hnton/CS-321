@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:weather_app_final/data.dart';
 
 class Layout extends StatefulWidget {
   @override
